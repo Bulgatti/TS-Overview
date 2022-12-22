@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS product (
   slogan TEXT,
   description TEXT,
   category TEXT NOT NULL,
-  default_price INTEGER NOT NULL
+  default_price TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS feature (
@@ -24,8 +24,8 @@ CREATE TABLE IF NOT EXISTS style (
   id SERIAL PRIMARY KEY,
   productId INTEGER REFERENCES product(id),
   name TEXT NOT NULL,
-  sale_price INTEGER,
-  original_price INTEGER NOT NULL,
+  sale_price TEXT,
+  original_price TEXT NOT NULL,
   default_style BOOLEAN NOT NULL
 );
 
@@ -48,3 +48,10 @@ CREATE TABLE IF NOT EXISTS related (
   current_product_id INTEGER REFERENCES product(id),
   related_product_id INTEGER NOT NULL
 );
+
+\COPY product FROM '../../data/product.csv' DELIMITER ',' CSV HEADER;
+\COPY feature FROM '../../data/features.csv' DELIMITER ',' CSV HEADER;
+\COPY style FROM '../../data/styles.csv' DELIMITER ',' CSV HEADER;
+\COPY photo FROM '../../data/photos.csv' DELIMITER ',' CSV HEADER;
+\COPY sku FROM '../../data/skus.csv' DELIMITER ',' CSV HEADER;
+\COPY related FROM '../../data/related.csv' DELIMITER ',' CSV HEADER;
