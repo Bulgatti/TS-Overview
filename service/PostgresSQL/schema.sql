@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS feature (
 
 CREATE TABLE IF NOT EXISTS style (
   id SERIAL PRIMARY KEY,
-  productId INTEGER REFERENCES product(id),
+  product_id INTEGER REFERENCES product(id),
   name TEXT NOT NULL,
   sale_price TEXT,
   original_price TEXT NOT NULL,
@@ -31,14 +31,14 @@ CREATE TABLE IF NOT EXISTS style (
 
 CREATE TABLE IF NOT EXISTS photo (
   id SERIAL PRIMARY KEY,
-  styleId INTEGER REFERENCES style(id),
+  style_id INTEGER REFERENCES style(id),
   url TEXT,
   thumbnail_url TEXT
 );
 
 CREATE TABLE IF NOT EXISTS sku (
   id SERIAL PRIMARY KEY,
-  styleId INTEGER REFERENCES style(id),
+  style_id INTEGER REFERENCES style(id),
   size TEXT,
   quantity INTEGER
 );
