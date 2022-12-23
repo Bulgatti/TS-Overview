@@ -49,9 +49,9 @@ CREATE TABLE IF NOT EXISTS related (
   related_product_id INTEGER NOT NULL
 );
 
-\COPY product FROM '../../data/product.csv' DELIMITER ',' CSV HEADER;
-\COPY feature FROM '../../data/features.csv' DELIMITER ',' CSV HEADER;
-\COPY style FROM '../../data/styles.csv' DELIMITER ',' CSV HEADER;
-\COPY photo FROM '../../data/photos.csv' DELIMITER ',' CSV HEADER;
-\COPY sku FROM '../../data/skus.csv' DELIMITER ',' CSV HEADER;
-\COPY related FROM '../../data/related.csv' DELIMITER ',' CSV HEADER;
+\COPY product FROM '../data/product.csv' DELIMITER ',' CSV HEADER;
+\COPY feature FROM '../data/features.csv' DELIMITER ',' CSV HEADER;
+\COPY style FROM '../data/styles.csv' DELIMITER ',' CSV HEADER;
+\COPY photo FROM '../data/photos.csv' DELIMITER ',' CSV HEADER;
+\COPY sku FROM '../data/skus.csv' DELIMITER ',' CSV HEADER;
+\COPY related FROM '../data/related.csv' DELIMITER ',' CSV HEADER;
