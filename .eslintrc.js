@@ -12,5 +12,7 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
+    'default-param-last': 0,
+    camelcase: 0,
   },
 };
