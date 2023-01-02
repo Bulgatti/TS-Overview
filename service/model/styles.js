@@ -22,14 +22,12 @@ const getStyles = async (product_id, cb) => {
 
     for (let i = 0; i < data.results.length; i += 1) {
       const currentSKU = skuData[i].rows;
-      console.log(currentSKU);
       const skus = {};
       for (let j = 0; j < currentSKU.length; j += 1) {
         skus[currentSKU[j].id] = { quantity: currentSKU[j].quantity, size: currentSKU[j].size };
       }
       data.results[i].photos = photoData[i].rows;
       data.results[i].skus = skus;
-      console.log(data.results[i]);
     }
   } catch (err) {
     cb(err);
