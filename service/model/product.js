@@ -1,6 +1,6 @@
 const db = require('../db');
 
-const getProduct = async (product_id) => {
+const getProduct = (product_id) => {
   const query = `SELECT json_build_object(
     'id', id,
     'name', name,
