@@ -12,6 +12,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
   },
+  plugins: ['jest'],
   rules: {
     'default-param-last': 0,
     camelcase: 0,
