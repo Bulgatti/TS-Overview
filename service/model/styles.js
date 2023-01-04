@@ -42,7 +42,7 @@ const getStyles = async (product_id) => {
     return data;
   } catch (err) {
     return err;
-  };
+  }
 };
 
 module.exports = getStyles;
