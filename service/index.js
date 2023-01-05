@@ -12,6 +12,8 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/loaderio-d149d4ff386a0467ebc838f6df271c3e', (req, res) => res.send('loaderio-d149d4ff386a0467ebc838f6df271c3e'));
+
 app.use(router);
 
 const PORT = process.env.PORT ?? 3000;
