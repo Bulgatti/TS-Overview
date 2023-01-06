@@ -12,7 +12,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/loaderio-d149d4ff386a0467ebc838f6df271c3e', (req, res) => res.send('loaderio-d149d4ff386a0467ebc838f6df271c3e'));
+app.get('/loaderio-6283fad8cdd1e0ac5f153d0dbb4e85e4', (req, res) => res.send('loaderio-6283fad8cdd1e0ac5f153d0dbb4e85e4'));
 
 app.use(router);
 
