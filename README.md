@@ -68,5 +68,3 @@ The system can efficiently handle 800 RPS with 75ms avg. response time (includin
 ## Future Improvements
 
 For further improvement, I would consider vertically scaling to a more powerful AWS instance. Adding additional indexes to the database would also be a simple addition to improve query time.
-
-## Further Documentation
